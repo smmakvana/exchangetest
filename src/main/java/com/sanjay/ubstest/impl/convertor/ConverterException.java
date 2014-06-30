@@ -1,7 +1,7 @@
-package com.sanjay.ubstest.util;
+package com.sanjay.ubstest.impl.convertor;
 
 /**
- * An Exception class to indicate that object cannot be convert into other object.
+ * An Exception class to indicate that object cannot be exchange into other object.
  */
 public class ConverterException extends Exception {
 

@@ -1,6 +1,9 @@
-package com.sanjay.ubstest.util;
+package com.sanjay.ubstest.impl.convertor;
 
-import com.sanjay.ubstest.DataInfo;
+import com.sanjay.ubstest.entity.DataInfo;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by chickpick on 29/06/14.
@@ -10,12 +13,12 @@ public class StringToData implements Converter<String,DataInfo>{
     public DataInfo convert(String input) throws ConverterException {
 
         if ( input == null ){
-            throw new ConverterException("Input is null cannot convert error", new ConverterException("Invalid input", new IllegalArgumentException()));
+            throw new ConverterException("Invalid input", new IllegalArgumentException());
         }
 
         String tokenns[] = input.split("\t");
         if ( tokenns.length !=7 ){
-            throw new ConverterException("Invalid input data", new ConverterException("Invalid input"));
+            throw new ConverterException("Invalid input data", new IllegalArgumentException("Invalid input"));
         }
 
         DataInfo dataInfo = new DataInfo();
@@ -27,5 +30,15 @@ public class StringToData implements Converter<String,DataInfo>{
         dataInfo.setCurrency(tokenns[5].trim());
         dataInfo.setAmount(tokenns[6].trim());
         return dataInfo;
+    }
+
+    @Override
+    public List<DataInfo> convert(List<String> inputList) throws ConverterException {
+        List<DataInfo> dataList = new ArrayList<DataInfo>();
+        for ( String line: inputList){
+            dataList.add(convert(line));
+        }
+
+        return dataList;
     }
 }

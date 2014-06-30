@@ -1,28 +1,25 @@
-package com.sanjay.ubstest.util;
+package com.sanjay.ubstest.impl.convertor;
 
-import com.sanjay.ubstest.DataInfo;
-import junit.framework.TestCase;
+import com.sanjay.ubstest.entity.DataInfo;
 import org.junit.Test;
+
+import static junit.framework.Assert.assertEquals;
 
 /**
  * Created by chickpick on 30/06/14.
  */
-public class StringToDataTest extends TestCase {
+public class StringToDataTest {
     @Test(expected = ConverterException.class)
     public void testNullInput() throws ConverterException {
         StringToData stringToData = new StringToData();
-        stringToData.convert(null);
+        stringToData.convert((String) null);
     }
 
 
     @Test(expected = ConverterException.class)
     public void testInvalidInput1() throws ConverterException {
-        StringToData stringToData = new StringToData();
-        DataInfo dataInfo = stringToData.convert("2300\t9917319\t\tUSA\tAAA+\tCHF\t9223372036854775809.456\"");
+        (new StringToData()).convert("2300\t9917319\t\tUSA\tAAA+\tCHF");
     }
-
-
-
 
     @Test
     public void testOutput() throws ConverterException {

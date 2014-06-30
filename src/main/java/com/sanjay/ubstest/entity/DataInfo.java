@@ -1,4 +1,4 @@
-package com.sanjay.ubstest;
+package com.sanjay.ubstest.entity;
 
 /**
  * Created by chickpick on 29/06/14.
@@ -72,5 +72,18 @@ public class DataInfo {
 
     public void setAmount(String amount) {
         this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return "DataInfo{" +
+                "companyCode='" + companyCode + '\'' +
+                ", account='" + account + '\'' +
+                ", city='" + city + '\'' +
+                ", country='" + country + '\'' +
+                ", creditRating='" + creditRating + '\'' +
+                ", currency='" + currency + '\'' +
+                ", amount='" + amount + '\'' +
+                '}';
     }
 }
