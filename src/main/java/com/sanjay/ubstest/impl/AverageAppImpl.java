@@ -6,9 +6,13 @@ import com.sanjay.ubstest.currency.Exchanger;
 import com.sanjay.ubstest.currency.FXMarket;
 import com.sanjay.ubstest.currency.UnknownCurrencyException;
 import com.sanjay.ubstest.entity.AverageAppException;
-import com.sanjay.ubstest.entity.DataInfo;
+import com.sanjay.ubstest.entity.EuroData;
+import com.sanjay.ubstest.entity.GroupEuroData;
+import com.sanjay.ubstest.entity.TradeData;
 import com.sanjay.ubstest.impl.convertor.ConverterException;
 import com.sanjay.ubstest.impl.convertor.StringToData;
+import com.sanjay.ubstest.impl.convertor.ToEuroDataConvertor;
+import com.sanjay.ubstest.impl.convertor.ToGroupEuroDataConverter;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -26,7 +30,8 @@ import static java.lang.Double.parseDouble;
  */
 public class AverageAppImpl implements AverageApp {
     private StringToData stringToData = new StringToData();
-   private Exchanger exchanger = new FXMarket();
+   private ToEuroDataConvertor toEuroDataConvertor = new ToEuroDataConvertor();
+    private ToGroupEuroDataConverter toGroupEuroDataConverter = new ToGroupEuroDataConverter();
 
     @Override
     public void showEuroAverage(String dataFilePath) throws AverageAppException {
@@ -34,21 +39,18 @@ public class AverageAppImpl implements AverageApp {
             URL resourceUrl = getClass().getResource(dataFilePath);
             Path resourcePath = Paths.get(resourceUrl.toURI());
             List<String> lines = Files.readAllLines(resourcePath, Charset.defaultCharset());
-            List<DataInfo> dataList = stringToData.convert(lines);
-            dataList.remove(0);
-            for (DataInfo line : dataList) {
-                System.out.print(line.getCurrency() + " " + line.getAmount() + " ");
-                Double amount = parseDouble(line.getAmount());
-                Double euro = exchanger.exchangeToEuro(Currency.valueOf(line.getCurrency()),  amount);
-                    System.out.println("-> Euro : " + euro);
-            }
+            lines.remove(0);
+            List<TradeData> dataList = stringToData.convert(lines);
+            List<EuroData> euroDataList = toEuroDataConvertor.convert(dataList);
+            GroupEuroData groupEuro = toGroupEuroDataConverter.convert(euroDataList);
+
+            groupEuro.printAvg();
+
         }catch(ConverterException ex){
             throw new AverageAppException();
         } catch (IOException e) {
             throw new AverageAppException();
         } catch (URISyntaxException e) {
-            throw new AverageAppException();
-        } catch (UnknownCurrencyException e) {
             throw new AverageAppException();
         } finally {
         }

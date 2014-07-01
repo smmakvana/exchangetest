@@ -1,6 +1,6 @@
 package com.sanjay.ubstest.impl.convertor;
 
-import com.sanjay.ubstest.entity.DataInfo;
+import com.sanjay.ubstest.entity.TradeData;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
@@ -26,7 +26,7 @@ public class StringToDataTest {
         //Company Code	Account	City	Country	Credit Rating	Currency	Amount
         //
         StringToData stringToData = new StringToData();
-        DataInfo dataInfo;
+        TradeData dataInfo;
         dataInfo = stringToData.convert("2300\t9917319\t\tUSA\tAAA+\tCHF\t9223372036854775809.456");
 
         assertEquals("2300",dataInfo.getCompanyCode());

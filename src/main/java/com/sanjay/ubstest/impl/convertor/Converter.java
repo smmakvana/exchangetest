@@ -12,6 +12,4 @@ public interface Converter<In, Out>{
 
     Out convert(In input) throws ConverterException;
 
-    List<Out> convert(List<In> inputList)throws ConverterException;
-
 }

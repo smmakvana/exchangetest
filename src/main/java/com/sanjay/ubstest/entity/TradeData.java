@@ -3,7 +3,7 @@ package com.sanjay.ubstest.entity;
 /**
  * Created by chickpick on 29/06/14.
  */
-public class DataInfo {
+public class TradeData {
 
     //Company Code	Account	City	Country	Credit Rating	Currency	Amount
 
@@ -16,7 +16,7 @@ public class DataInfo {
     private String country;
     private String creditRating;
     private String currency;
-    private String amount;
+    private Double amount;
 
     public String getCompanyCode() {
         return companyCode;
@@ -66,17 +66,17 @@ public class DataInfo {
         this.currency = currency;
     }
 
-    public String getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
 
     @Override
     public String toString() {
-        return "DataInfo{" +
+        return "TradeData{" +
                 "companyCode='" + companyCode + '\'' +
                 ", account='" + account + '\'' +
                 ", city='" + city + '\'' +
