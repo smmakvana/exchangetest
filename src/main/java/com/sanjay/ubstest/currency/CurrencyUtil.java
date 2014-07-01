@@ -1,12 +1,8 @@
 package com.sanjay.ubstest.currency;
-/*
- * Masabi Ltd.
- * 56 Ayres Street, London, SE1 1EU
- * http://www.masabi.com/
- *
- * Copyright (c) 2014 Masabi Ltd. All rights reserved.
- */
 
+/**
+ * Calculate the currency pair key
+ */
 public class CurrencyUtil {
 
     /**

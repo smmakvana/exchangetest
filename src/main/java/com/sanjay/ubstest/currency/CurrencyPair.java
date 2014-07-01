@@ -1,7 +1,7 @@
 package com.sanjay.ubstest.currency;
 
 /**
- * Created by chickpick on 30/06/14.
+ * Hold the currency pair information..
  */
 public class CurrencyPair {
     private final String baseCurrency;

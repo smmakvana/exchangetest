@@ -1,7 +1,7 @@
 package com.sanjay.ubstest.currency;
 
 /**
- * Created by chickpick on 30/06/14.
+ * Foreign Exchange market API
  */
 public interface FXMarket {
 

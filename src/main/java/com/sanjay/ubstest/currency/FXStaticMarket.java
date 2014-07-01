@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Simulated FX Market.
+ * Simulated Foreign Exchange Market.
  */
 public class FXStaticMarket implements FXMarket {
     private Map<String,CurrencyPair> exchangeMap = new HashMap<String, CurrencyPair>();

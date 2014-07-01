@@ -1,15 +1,11 @@
 package com.sanjay.ubstest.entity;
-/*
- * Masabi Ltd.
- * 56 Ayres Street, London, SE1 1EU
- * http://www.masabi.com/
- *
- * Copyright (c) 2014 Masabi Ltd. All rights reserved.
- */
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Hold the trade data for each credit ratings.
+ */
 public class CreditTradeData {
     private final String credit;
     private final List<Double> amounts = new ArrayList<Double>();

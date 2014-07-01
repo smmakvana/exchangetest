@@ -1,14 +1,10 @@
 package com.sanjay.ubstest.entity;
-/*
- * Masabi Ltd.
- * 56 Ayres Street, London, SE1 1EU
- * http://www.masabi.com/
- *
- * Copyright (c) 2014 Masabi Ltd. All rights reserved.
- */
 
 import java.util.HashMap;
 
+/**
+ * Hold the country trade data.
+ */
 public class CountryTradeData {
     private final String country;
     private Double totalPrice; // price in euro

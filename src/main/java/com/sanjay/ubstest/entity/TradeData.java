@@ -3,14 +3,9 @@ package com.sanjay.ubstest.entity;
 import com.sanjay.ubstest.currency.Currency;
 
 /**
- * Created by chickpick on 29/06/14.
+ * Hold the each trade data.
  */
 public class TradeData {
-
-    //Company Code	Account	City	Country	Credit Rating	Currency	Amount
-
-    //Company Code	Account	City	Country	Credit Rating	Currency	Amount
-    //2300	9917319		USA	AAA+	CHF	9223372036854775809.456
 
     private String companyCode;
     private String account;

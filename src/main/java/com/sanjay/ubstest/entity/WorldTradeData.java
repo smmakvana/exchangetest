@@ -1,15 +1,11 @@
 package com.sanjay.ubstest.entity;
-/*
- * Masabi Ltd.
- * 56 Ayres Street, London, SE1 1EU
- * http://www.masabi.com/
- *
- * Copyright (c) 2014 Masabi Ltd. All rights reserved.
- */
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Hold the world trade data.
+ */
 public class WorldTradeData {
     private Map<String, CountryTradeData> allTrade = new HashMap<String, CountryTradeData>();
 
