@@ -1,14 +1,19 @@
 package com.sanjay.ubstest.impl.convertor;
 
-import com.sanjay.ubstest.entity.TradeData;
-
 import java.util.ArrayList;
 import java.util.List;
+import com.sanjay.ubstest.currency.Currency;
+import com.sanjay.ubstest.currency.FXMarket;
+import com.sanjay.ubstest.currency.FXStaticMarket;
+import com.sanjay.ubstest.currency.UnknownCurrencyException;
+import com.sanjay.ubstest.entity.TradeData;
 
 /**
  * Created by chickpick on 29/06/14.
  */
 public class StringToData implements Converter<String,TradeData>{
+
+    private FXMarket fxMarket = new FXStaticMarket();
     @Override
     public TradeData convert(String input) throws ConverterException {
 
@@ -27,8 +32,13 @@ public class StringToData implements Converter<String,TradeData>{
         dataInfo.setCity(tokenns[2].trim());
         dataInfo.setCountry(tokenns[3].trim());
         dataInfo.setCreditRating(tokenns[4].trim());
-        dataInfo.setCurrency(tokenns[5].trim());
+        dataInfo.setCurrency(Currency.valueOf(tokenns[5].trim()));
         dataInfo.setAmount(Double.parseDouble(tokenns[6].trim()));
+        try {
+            dataInfo.setEuroAmount(fxMarket.exchangeToEuro(dataInfo.getCurrency(),dataInfo.getAmount()));
+        } catch (UnknownCurrencyException e) {
+            throw new ConverterException(e.getMessage(),e);
+        }
         return dataInfo;
     }
 

@@ -1,58 +1,92 @@
-"C:\Program Files\Java\jdk1.7.0_51\bin\java" -Didea.launcher.port=7543 "-Didea.launcher.bin.path=E:\intelij\IntelliJ IDEA Community Edition 13.0.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.7.0_51\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\jfxrt.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\ext\access-bridge.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\ext\zipfs.jar;E:\dev\ubscoding\exchangetest\target\classes;E:\intelij\IntelliJ IDEA Community Edition 13.0.1\lib\idea_rt.jar" com.intellij.rt.execution.application.AppMain com.sanjay.ubstest.Application
-Country USA
-USA AAA+ EUR:7515340178177966100.00
-USA AAA+ EUR:53357521.91
-USA AAA+ EUR:-58958169.62
-USA AAA+ EUR:7990112.88
-Average for rating aaa+ is ----->EUR:1878835044545089020.00
-USA BBB EUR:-11300338777005777000.00
-Average for rating bbb is ----->EUR:-11300338777005777000.00
-Average for country USA is ----->EUR:-756999719765084160.00
+/usr/lib/jvm/java-7-oracle/bin/java -Didea.launcher.port=7545 -Didea.launcher.bin.path=/home/sanjaymakvana/dev/software/inteliJ/bin -Dfile.encoding=UTF-8 -classpath /usr/lib/jvm/java-7-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-7-oracle/jre/lib/javaws.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jfxrt.jar:/usr/lib/jvm/java-7-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-7-oracle/jre/lib/management-agent.jar:/usr/lib/jvm/java-7-oracle/jre/lib/plugin.jar:/usr/lib/jvm/java-7-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-7-oracle/jre/lib/deploy.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-7-oracle/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-7-oracle/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-7-oracle/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-7-oracle/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-7-oracle/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-7-oracle/jre/lib/ext/sunec.jar:/home/sanjaymakvana/dev/workspace/github/exchangetest/target/classes:/home/sanjaymakvana/dev/software/inteliJ/lib/idea_rt.jar com.intellij.rt.execution.application.AppMain com.sanjay.ubstest.Application
 
-Country IND
-IND Aaa+ EUR:681357836.21
-Average for rating aaa+ is ----->EUR:681357836.21
-Average for country IND is ----->EUR:681357836.21
 
-Country NOR
-NOR B EUR:442617441.51
-Average for rating b is ----->EUR:442617441.51
-NOR A EUR:686125401.95
-NOR A EUR:1085267912.93
-Average for rating a is ----->EUR:885696657.44
-Average for country NOR is ----->EUR:738003585.46
 
-Country RUS
-RUS Aaa- EUR:91398441.77
-Average for rating aaa- is ----->EUR:91398441.77
-Average for country RUS is ----->EUR:91398441.77
+		BBB	-11300338777005777000.00
+=======================================
+Rating[BBB] Avg: Euro -11300338777005777000.00
 
-Country UK
-UK A EUR:382428356.15
-UK A EUR:-488431514.29
-UK a EUR:70497868.20
-Average for rating a is ----->EUR:-11835096.65
-Average for country UK is ----->EUR:-11835096.65
+		AAA+	7515340178177966100.00
+		AAA+	53357521.91
+		AAA+	-58958169.62
+		AAA+	7990112.88
+=======================================
+Rating[AAA+] Avg: Euro 1878835044545089020.00
+=================================================
+Rating[USA]  Avg: Euro -756999719765084290.00
+**********************************************************************************
 
-Country DK
-DK NR EUR:491333881.95
-DK NR EUR:756864441.92
-Average for rating nr is ----->EUR:624099161.94
-Average for country DK is ----->EUR:624099161.94
 
-Country London
-London A EUR:    559.73
-Average for rating a is ----->EUR:    559.73
-London - EUR: 643266.47
-Average for rating - is ----->EUR: 643266.47
-Average for country London is ----->EUR: 321913.10
+		Aaa+	681357836.21
+=======================================
+Rating[Aaa+] Avg: Euro 681357836.21
+=================================================
+Rating[IND]  Avg: Euro 681357836.21
+**********************************************************************************
 
-Country IRL
-IRL Aa EUR:466160881.92
-IRL Aa EUR:744049794.27
-Average for rating aa is ----->EUR:605105338.10
-Average for country IRL is ----->EUR:605105338.10
 
+		A	686125401.95
+		A	1085267912.93
+=======================================
+Rating[A] Avg: Euro 885696657.44
+
+		B	442617441.51
+=======================================
+Rating[B] Avg: Euro 442617441.51
+=================================================
+Rating[NOR]  Avg: Euro 738003585.46
+**********************************************************************************
+
+
+		Aaa-	91398441.77
+=======================================
+Rating[Aaa-] Avg: Euro 91398441.77
+=================================================
+Rating[RUS]  Avg: Euro 91398441.77
+**********************************************************************************
+
+
+		A	382428356.15
+		A	-488431514.29
+=======================================
+Rating[A] Avg: Euro -53001579.07
+
+		a	70497868.20
+=======================================
+Rating[a] Avg: Euro 70497868.20
+=================================================
+Rating[UK]  Avg: Euro -11835096.65
+**********************************************************************************
+
+
+		NR	491333881.95
+		NR	756864441.92
+=======================================
+Rating[NR] Avg: Euro 624099161.94
+=================================================
+Rating[DK]  Avg: Euro 624099161.94
+**********************************************************************************
+
+
+		A	    559.73
+=======================================
+Rating[A] Avg: Euro 559.73
+
+		-	 643266.47
+=======================================
+Rating[-] Avg: Euro 643266.47
+=================================================
+Rating[London]  Avg: Euro 321913.10
+**********************************************************************************
+
+
+		Aa	466160881.92
+		Aa	744049794.27
+=======================================
+Rating[Aa] Avg: Euro 605105338.10
+=================================================
+Rating[IRL]  Avg: Euro 605105338.10
+**********************************************************************************
 
 
 Process finished with exit code 0

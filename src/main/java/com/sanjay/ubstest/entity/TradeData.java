@@ -1,5 +1,7 @@
 package com.sanjay.ubstest.entity;
 
+import com.sanjay.ubstest.currency.Currency;
+
 /**
  * Created by chickpick on 29/06/14.
  */
@@ -15,8 +17,9 @@ public class TradeData {
     private String city;
     private String country;
     private String creditRating;
-    private String currency;
+    private Currency currency;
     private Double amount;
+    private Double euroAmount;
 
     public String getCompanyCode() {
         return companyCode;
@@ -58,11 +61,11 @@ public class TradeData {
         this.creditRating = creditRating;
     }
 
-    public String getCurrency() {
+    public Currency getCurrency() {
         return currency;
     }
 
-    public void setCurrency(String currency) {
+    public void setCurrency(final Currency currency) {
         this.currency = currency;
     }
 
@@ -85,5 +88,18 @@ public class TradeData {
                 ", currency='" + currency + '\'' +
                 ", amount='" + amount + '\'' +
                 '}';
+    }
+
+    public String getCountryOrCity() {
+        return country!=null && country.trim().length()>0?country.trim().toUpperCase(): (city!=null?city:"unknown");
+
+    }
+
+    public Double getEuroAmount() {
+        return euroAmount;
+    }
+
+    public void setEuroAmount(final Double euroAmount) {
+        this.euroAmount = euroAmount;
     }
 }
